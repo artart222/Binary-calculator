@@ -62,6 +62,17 @@ void Bin::to_one_complement() {
     type = "bin";
 }
 
+void Bin::to_two_complement() {
+    string numberstr = to_string(number);
+    int i = numberstr.size() - 1;
+    while (int(numberstr[i]) -48 + 1 > 1) {
+        i--;
+    }
+    numberstr[i] = '1';
+    number = stoi(numberstr);
+    type = "bin";
+}
+
 int Bin::get_value() {
     return number;
 }
@@ -69,3 +80,23 @@ int Bin::get_value() {
 string Bin::get_type() {
     return type;
 }
+
+void Bin::set_value(int x) {
+    number = x;
+}
+
+/*Bin Bin::operator+ (Bin & num2) {
+    if (this->get_type() == num2.get_type()) {
+        if (this->get_type() == "bin") {
+            string num1str = to_string(this->get_value());
+            int i1 = num1str.size() - 1; // number 1 last index
+            string num2str = to_string(num2.get_value());
+            int i2 = num2str.size() - 1; // number 2 last index
+            int res = 0; // reserve
+
+
+        } else {
+            this->set_value(this->get_value() + num2.get_value());
+        }
+    }
+}*/

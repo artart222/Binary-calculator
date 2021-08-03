@@ -26,6 +26,10 @@ class Bin {
         void to_one_complement();
 
         void to_two_complement();
+
+        void set_value(int x);
+
+        // Bin operator+(Bin& num2);
 };
 
 #endif

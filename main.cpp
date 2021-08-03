@@ -5,32 +5,9 @@
 using namespace std;
 
 int main() {
-    Bin test(73, "int");
-    test.to_bin();
-    cout << test.get_value() << endl;
-    cout << test.get_type() << endl;
-    test.to_int();
-    cout << test.get_value() << endl;
-    cout << test.get_type() << endl;
-    test.to_bin();
-    cout << test.get_value() << endl;
-    cout << test.get_type() << endl;
+    Bin a1(3, "int"), a2(23, "int");
 
-
-    cout << "\n\n\n\n" << endl;
-
-    Bin test2(3, "int");
-    test2.to_bin();
-    cout << test2.get_value() << endl;
-    cout << test2.get_type() << endl;
-    test2.to_int();
-    cout << test2.get_value() << endl;
-    cout << test2.get_type() << endl;
-    test2.to_bin();
-    cout << test2.get_value() << endl;
-    cout << test2.get_type() << endl;
-
-
-    test.to_one_complement();
-    cout << test.get_value() << endl;
+    // a1 + a2;
+    cout << a1.get_value() << endl;
+    return 0;
 }
